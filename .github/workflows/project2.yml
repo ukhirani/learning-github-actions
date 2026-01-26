@@ -12,10 +12,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Make scripts executable
-        run: chmod +x build.sh app/app.sh
+        run: chmod +x build.sh ../project2/app/app.sh
 
       - name: Build stage
-        run: ./build.sh
+        run: ../project2/build.sh
 
       - name: Docker image build
         run: docker build -t devops-pipeline:ci .
